@@ -1,0 +1,114 @@
+<link id="dfMode" rel="stylesheet" href="{ASSETROOT}/css/skin.cool.css">
+<script type="module">
+import tatiyeNet,{shareLink} from "{tatiye.es6}";
+ shareLink({
+    'atribut':'#shareLink',
+    'baseLink':'{url}'
+  });
+ window.tabImages=function(images) {
+   $("#mtyabImages").attr('src',images);
+}
+</script>
+<div class="content content-fixed bd-b pt-80px">
+      <div class="container pd-x-0 pd-lg-x-10 pd-xl-x-0">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-style1 mg-b-10">
+                <li class="breadcrumb-item"><a href="#">posts</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{categori}</li>
+              </ol>
+            </nav>
+            <h4 class="mg-b-0">{categori}</h4>
+          </div>
+          <div class="search-form mg-t-20 mg-sm-t-0">
+            <input type="search" class="form-control" id="searchpost"placeholder="Search people">
+            <button class="btn" type="button"><i data-feather="search"></i></button>
+          </div>
+        </div>
+      </div><!-- container -->
+    </div><!-- content -->
+
+    <div class="content">
+      <div class="container pd-x-0 pd-lg-x-10 pd-xl-x-0">
+        <div class="row">
+          <div class="col-lg-9">
+              <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-8">
+                  <!-- card -->
+             <div class="card mg-b-20 mg-lg-b-25">
+               <img id="mtyabImages" style="width:100%" src="{filename}" class="rounded-5" alt="">
+              <div class="card-body pd-20 pd-lg-25">
+                <p class="mg-b-0">
+                 <div class="row pl-10px ">
+                   <div class="col-md-8">
+                <div class="media align-items-center mg-b-20">
+                  <div class="avatar avatar-online1"><img src="{icon}" class="rounded-circle" alt=""></div>
+                  <div class="media-body pd-l-15">
+                    <h6 class="mg-b-3">Tatiye</h6>
+                    <span class="d-block tx-13 tx-color-03">Dilihat {dilihat}x {pubDate}</span>
+                  </div>
+                  <span class="d-none d-sm-block tx-12 tx-color-03 align-self-start"></span>
+                </div><!-- media -->
+                </div><!-- media -->
+                    <div class="col-md-4">
+                      <div class="img-group mb-10px pull-right ">
+                          <!-- App thumb -->
+                        <img  onclick="tabImages('{thumb.IMG591}');" src="{thumb.IMG300}" class="img wd-35 ht-35 mr-8px rounded-circle" alt="">
+                       <!-- END_App thumb -->
+                      </div>
+                    </div>
+                 </div>
+                   <h3 style="margin-bottom:0rem;" >{title}</h3>
+                   <div id="shareLink"></div>
+                  {detail}
+              </div>
+            </div><!-- card -->
+                </div>
+                <div class="col-md-1"> </div>
+              </div>
+          </div>
+          <!-- col -->
+          <div class="col-lg-3 mg-t-40 mg-lg-t-0 pl-30px">
+            <div class="d-flex align-items-center justify-content-between mg-b-20">
+              <h6 class="tx-uppercase tx-semibold mg-b-0">Populer Aktivitas</h6>
+            </div>
+          <app-tatiye 
+            token="eyJkaXIiOiJwb3N0aW5nYW5cL0FwaVwvMC4xXC9saXN0LnBocCIsInVpZCI6MX0"
+            indexOn="ul"
+            console="false"
+            keywords="searchpost"
+             stack="group"
+            id="app">
+             <ul class="list-unstyled media-list mg-b-15"key="5"keywords="off" page="1"id="template">
+              <li class="media align-items-center mb-10px">
+                <a href="javascript:void(0);"><div class="avatar">
+                  <img name="thumbnail" src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div></a>
+                <div class="media-body pd-l-15">
+                  <a  link="posts"href="#" class="link-01"><h6 class="mg-b-2"name="title" textMore="20"></h6></a>
+                  <span class="tx-13 tx-color-03"name="pubDate"></span>
+                </div>
+              </li>
+            </ul>
+             </app-tatiye>
+            <stack-group></stack-group>
+            <h6 class="tx-uppercase tx-semibold mg-t-50 mg-b-15">Tutorial </h6>
+            <nav class="nav nav-classic tx-13">
+              <a href="" class="nav-link"><span>Software Engineer</span> <span class="badge">20</span></a>
+              <a href="" class="nav-link"><span>UI/UX Designer</span> <span class="badge">18</span></a>
+              <a href="" class="nav-link"><span>Sales Representative</span> <span class="badge">14</span></a>
+              <a href="" class="nav-link"><span>Product Representative</span> <span class="badge">12</span></a>
+              <a href="" class="nav-link"><span>Full-Stack Developer</span> <span class="badge">10</span></a>
+            </nav>
+            <h6 class="tx-uppercase tx-semibold mg-t-50 mg-b-15">Layanan </h6>
+            <nav class="nav nav-classic tx-13">
+                  <!-- App sales -->
+                   <a  href="{sales.LINK}"class="nav-link"><span>{sales.TITEL}</span><span class="badge">{sales.ICON}</span></a>
+                 <!-- END_App sales -->
+            </nav>
+          </div><!-- col -->
+        </div><!-- row -->
+      </div><!-- container -->
+    </div><!-- content -->
+

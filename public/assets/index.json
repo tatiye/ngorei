@@ -1,0 +1,1 @@
+{"status":"dev","router":"index","public":"theme","spinner":"text-primary","mainroute":"mainRoute","explode":"#","patroutes":1,"link":{"home":{"1":["Home","home","icon"],"2":["About","pages\/about","icon"],"3":["Info","pages\/info","icon"],"4":["privacy","pages\/privacy","icon"]}},"hashtag":{"zero":{"1":["Doc Type","docs\/configurasi\/","doctype","icon"]}}}

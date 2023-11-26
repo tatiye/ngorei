@@ -1,0 +1,65 @@
+<script type="module">
+import tatiyeNet,{components,setSplit} from "{tatiye.es6}"; 
+
+             var settings = {
+                "url": tatiyeNet.routes+'/assets/index.json',
+                "method": "GET",
+                "timeout": 0,
+              }; 
+
+ $.ajaxSetup({ cache: false });
+ $('#search').keyup(function(){
+  $('#result').html('');
+  $('#state').val('');
+  var searchField = $('#search').val();
+  var expression = new RegExp(searchField, "i");
+
+console.log(tatiyeNet.routes)
+
+
+              $.ajax(settings).done(function (todos) {
+
+                   $.each(todos.link.search,function(key1, value){
+                              let resSplit=setSplit(1,'/',value[1])
+                              console.log(resSplit);
+                              var setsearch=resSplit+' '+value[0]
+						 if (setsearch.search(expression) != -1){
+                           
+						 	var desain=`<div style="border-color: #d2d2d200;padding:0px; padding-bottom:10px ;" class="list-group-item d-flex align-items-center">
+                                 
+                                  <div class="avatar">
+                                      <span class="avatar-initial rounded-circle bg-gray-600 wd-30 ht-30 mg-r-15">
+                                      <i class="icon-feather-search"></i>
+                                      </span>
+                                    </div>
+                                  <div>
+                                   <a href="${tatiyeNet.routes}/${value[1]}">
+                                    <h6 class="tx-13  tx-semibold mg-b-0 text-lowercase">${setsearch}</h6>
+                                    <span class="d-block tx-11 text-muted">${value[1]}</span>
+                                 </a>
+                                  </div>
+                                </div>`;
+						      $('#result').append(desain);
+						    }
+
+                    });
+              });
+
+
+       });
+</script>
+
+<div class="col-md-12">
+  <div class="search-form mb-10px">
+    <input type="search"id="search"  class="form-control" placeholder="Search">
+    <button class="btn" type="button"><i class="icon-feather-search"></i></button>
+  </div>
+  <div id="setScrol" style="max-height:200px;">
+  <div style="color:#000; " id="result"></div>
+</div>
+</div>
+<style type="text/css">
+   .setModal{
+
+   } 
+</style>

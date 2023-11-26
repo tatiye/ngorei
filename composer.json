@@ -1,0 +1,39 @@
+{
+    "name": "tatiye/ngorei",
+    "description": "Bangun aplikasi iOS, Android & Desktop berfitur lengkap",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+          "app\\": "app/helpers/",
+          "app\\config\\": "app/config/",
+          "app\\models\\": "app/models/",
+          "public\\": "public/"
+        }
+    },
+    "authors": [
+        {
+            "name": "tatiye",
+            "email": "info@tatiye.net"
+        }
+    ],
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+         "php": "^7.4|^8.0",
+         "doctrine/sql-formatter": "^1.1",
+         "phpoffice/phpspreadsheet": "^1.29",
+         "dompdf/dompdf": "^2.0",
+         "midtrans/midtrans-php": "dev-master"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "prefer-stable": true 
+}

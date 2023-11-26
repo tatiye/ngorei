@@ -1,0 +1,37 @@
+<script src="{ROOTPUBLIC}/modules/theme/app.jsx" defer type="module"></script>
+    <nav style="background-color:#2E3440" class="navbar navbar-header navbar-header-fixed">
+      <a href="{HOME}/doc" id="sidebarMenuOpen" class="burger-menu"></a>
+
+      <div style="width: 70px;" class="navbar-brand">
+           <div class="avatar avatar-sm mg-r-8">
+            <img src="{icon}" class="rounded-circle" alt="">
+          </div>
+          <h3 class="pd-t-10"></h3>
+      </div><!-- navbar-brand -->
+
+      <div onclick="newLink('pages/search','Search');" class="navbar-brandx d-none d-sm-flex content content-header">
+        <div class="content-search">
+          <i class="ti-search  cds"></i>
+          <input type="search" class="form-control" placeholder="Search...">
+        </div>
+        <nav class="nav">
+            <a href="javascript:void(0);" class="nav-link bold1 fs-12px">CTR+K</a>
+            <a href="javascript:void(0);" class="nav-link bold1"><i class="picons-193"></i></a>
+        </nav>
+      </div>
+
+
+      <div class="navbar-right d-sm-flex" style="margin-left:190px;">
+        <!-- App home -->
+          <a href="{home.LINK}" class="nav-link tx-white"><strong>{home.TITEL}</strong></a>
+        <!-- END_App home -->
+      </div>
+
+      <div class="navbar-right" style="width: 130px">
+        <a href="https://github.com/tatiye" target="_blank" class="btn btn-social"><i class="fab fa-github tx-white"></i></a>
+
+      </div>
+      
+    </nav><!-- navbar -->
+  <div id="mainRouteModal"></div>
+  <div id="mainRoute">

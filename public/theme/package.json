@@ -1,0 +1,110 @@
+{
+   "app":{
+         "sitename"    :"Tatiye",
+         "favicon"     :"Favicon.png",
+         "icon"        :"Logo.png",
+         "logo"        :"Logo.png",
+         "images"      :"cover.png",
+         "title"       :"Tatiye Developer Framework Ngorei",
+         "headline"    :"Tatiye Developer Framework Ngorei",
+         "description" :"Ngorei adalah kerangka kerja tatiye develover untuk mengembangkan aplikasi seluler, desktop, atau web dengan tampilan dan nuansa asli. Ini juga merupakan alat pembuatan prototipe aplikasi",
+         "version"     :"v1.0.4",
+         "router"      :true,
+         "console"     :true
+   },
+   "assets":{
+      "autoload":true,
+      "header":[ 
+         "lib/@fortawesome/fontawesome-free/css/all.min.css",
+         "lib/ionicons/css/ionicons.min.css",
+         "lib/datatables.net-dt/css/jquery.dataTables.min.css",
+         "lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css",
+         "lib/select2/css/select2.min.css",
+         "assets/css/Components.css",
+         "assets/css/dashforge.dashboard.css",
+         "assets/css/dashforge.demo.css",
+         "node_modules/tatiye/ngorei.css",
+         "node_modules/tatiye/ngorei.min.js",
+         "lib/prism/prism.css"
+      ],
+      "footer":[ 
+         "lib/jquery/jquery.min.js",
+         "lib/jquery/jquery-ui.min.js",
+         "lib/js-cookie/js.cookie.js",
+         "lib/prism/prism.js",
+         "lib/prism/clipboard.code.js",
+         "lib/prism/clipboard.min.js",
+         "lib/shortcuts.js"
+      ]
+   },
+
+   "navbar":{
+      "1":[ "Beranda"  ,"home","icon"],
+      "2":[ "about"    ,"pages/about","icon"],
+      "3":[ "Vue"      ,"pages/vue","icon"],
+      "4":[ "React"    ,"pages/reac","icon"],
+      "5":[ "Policy"   ,"pages/privacy","icon"]
+   },
+
+   "link":{
+      "1":[ "Beranda"    ,"home","icon"],
+      "2":[ "Exsampel"   ,"pages/about","icon"],
+      "3":[ "Privacy "   ,"pages/privacy","icon"],
+      "4":[ "Vue"        ,"pages/vue","icon"]
+   },
+   "filePath":{
+      "1":[ "images/assets"  ,""],
+      "2":[ "images"     ,""],
+      "3":[ "images/img"     ,""]
+   },
+
+   "metakeywords":{
+      "docs" :["Dokumentasi Ngorei","cover.png"],
+      "sales":["Layanan Jasa","cover.png"],
+      "blog" :["Blog Tutorial Ngorei","cover.png"]
+   },
+
+   "graph":{
+       "docs"   :true,
+       "sales"  :true,
+       "client" :true
+   },
+
+   "includePath":{
+      "Configurasi":"theme/docs/path/Configurasi.html",
+      "setHeader":"theme/inc/header.html",
+      "docDom":"theme/docs/path/dom.html",
+      "docContent":"theme/docs/path/content.html",
+      "docRouter":"theme/docs/path/router.html",
+      "docStorage":"theme/docs/path/storage.html",
+      "docRead":"theme/docs/path/read.html",
+      "docModal":"theme/docs/path/modal.html",
+      "docFrom":"theme/docs/path/from.html",
+      "docRest":"theme/docs/path/Rest.html",
+      "docTabel":"theme/docs/path/tabel.html",
+      "docGrid":"theme/docs/path/grid.html",
+      "docChart":"theme/docs/path/chart.html",
+      "docIcon":"theme/docs/path/icon.html",
+      "docHelper":"theme/docs/path/helper.html",
+      "docComponents":"theme/docs/path/components.html",
+      "docModules":"theme/docs/path/modules.html",
+      "docReact":"theme/docs/path/react.html",
+      "docOffice":"theme/docs/path/office.html",
+      "docFirebase":"theme/docs/path/firebase.html",
+      "docDatatables":"theme/docs/path/datatables.html"
+   },
+   "import":{
+      "assets":"theme/docs/assets.jsx"
+   },
+
+   "metaGraf":{
+       "docs"   :["content"],
+       "sales"  :["content"],
+       "posts"  :["tabel","appnews","link"],
+       "client" :["content"]
+   }
+
+}
+
+
+   
