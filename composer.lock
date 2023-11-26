@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2b31146fc4428b9740cfb7ec009885df",
+    "content-hash": "4c13c945b2e5cbfb59a11f1aef5de5a0",
     "packages": [
         {
             "name": "doctrine/sql-formatter",
@@ -456,7 +456,6 @@
                 "phpunit/phpunit": "5.7.*",
                 "psy/psysh": "0.4.*"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -483,10 +482,6 @@
             ],
             "description": "PHP Wrapper for Midtrans Payment API.",
             "homepage": "https://midtrans.com",
-            "support": {
-                "issues": "https://github.com/Midtrans/midtrans-php/issues",
-                "source": "https://github.com/Midtrans/midtrans-php/tree/master"
-            },
             "time": "2021-09-15T03:07:18+00:00"
         },
         {
@@ -1104,8 +1099,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.4|^8.0"
+        "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "1.1.0"
 }
