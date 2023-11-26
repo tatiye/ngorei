@@ -3,7 +3,7 @@
         'name' => 'tatiye/ngorei',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'b6c68a1b895449a85589813a879c75f69784eba5',
+        'reference' => '40020823568adc9320eb18f21090be49c163e0bc',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -177,7 +177,7 @@
         'tatiye/ngorei' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'b6c68a1b895449a85589813a879c75f69784eba5',
+            'reference' => '40020823568adc9320eb18f21090be49c163e0bc',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

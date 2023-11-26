@@ -1,8 +1,10 @@
 {
     "name": "tatiye/ngorei",
     "description": "Bangun aplikasi iOS, Android & Desktop berfitur lengkap",
+    "homepage": "https://madskullcreations.com",
     "type": "project",
-    "license": "MIT",
+    "license": "GPL-3.0-or-later",
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
           "app\\": "app/helpers/",
@@ -22,7 +24,6 @@
             "Tests\\": "tests/"
         }
     },
-    "minimum-stability": "dev",
     "require": {
          "php": "^7.4|^8.0",
          "doctrine/sql-formatter": "^1.1",
@@ -30,10 +31,24 @@
          "dompdf/dompdf": "^2.0",
          "midtrans/midtrans-php": "dev-master"
     },
-    "config": {
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
-        "sort-packages": true
+
+
+    "scripts": {
+        "post-install-cmd": ["App\\Console\\Installer::postInstall", "App\\Console\\InstallerSimplicity::postInstall"],
+        "post-create-project-cmd": ["App\\Console\\Installer::postInstall", "App\\Console\\InstallerSimplicity::postInstall"],
+        "post-update-cmd": ["App\\Console\\InstallerSimplicity::postInstall"],
+        "post-autoload-dump": "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump",
+        "check": [
+            "@test",
+            "@cs-check"
+        ],
+        "cs-check": "phpcs --colors -p --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests",
+        "cs-fix": "phpcbf --colors --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests",
+        "test": "phpunit --colors=always"
     },
-    "prefer-stable": true 
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    }
+
 }
