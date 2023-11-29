@@ -9,8 +9,7 @@
     public function index(){
       $Text=tatiye::Text();
       $tatiyeNet = new tatiyeNetInit();
-       // require_once APPROOT.'/models/App.php';
-         require_once APPROOT.'/models/Graph.php';
+       require_once APPROOT.'/models/App.php';
        require_once APPROOT.'/libraries/direktory.php';
        foreach($DIREKTORY as $page => $row) {
         $tatiyeNet->val($page, $row);
@@ -39,27 +38,25 @@
              exit;
           }
 
-            if (!empty($_POST['key'])) {
-             $infoToken = array(
-                    'key'       =>$_POST['key'],
-                    'resheader'     =>$_POST['resheader']??='',
-                    'tabel'     =>$_POST['tabel']??='',
-              );
-              foreach($infoToken as $page => $row) {
-                  $tatiyeNet->val($page, $row);
-              }
-            } 
-            if (@$_POST['tabel']=='percode') {
-               tatiye::precode($dirFile,'html');
-            } else {
-                echo $tatiyeNet->GraphObject(tatiye::dir('public/'.$dirFile));
-            }
-            
-             echo '<script src="'.$DIREKTORY['ROOTPUBLIC'].'/lib/prism/clipboard.code.js"></script>
-             <script src="'.$DIREKTORY['ROOTPUBLIC'].'/lib/prism/clipboard.min.js"></script>
-             ';
+if (!empty($_POST['key'])) {
+ $infoToken = array(
+        'key'       =>$_POST['key'],
+        'resheader'     =>$_POST['resheader']??='',
+        'tabel'     =>$_POST['tabel']??='',
+  );
+  foreach($infoToken as $page => $row) {
+      $tatiyeNet->val($page, $row);
+  }
+} 
+
+
+
+
+
+         
+             echo $tatiyeNet->GraphObject(tatiye::dir('public/'.$dirFile));
+
    
     }
  
   }
-

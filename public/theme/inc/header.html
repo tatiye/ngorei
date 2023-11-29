@@ -1,37 +1,94 @@
-<script src="{ROOTPUBLIC}/modules/theme/app.jsx" defer type="module"></script>
-    <nav style="background-color:#2E3440" class="navbar navbar-header navbar-header-fixed">
-      <a href="{HOME}/doc" id="sidebarMenuOpen" class="burger-menu"></a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon"  href="">
+<title>{sitename}</title>
+<!-- App header -->{header.ASSETS}
+<!-- END_App header --> 
+<div id="mainRouteModal"></div>
+<style type="text/css">
+  body {
+    background-color: #2E3440;
+  }
+  ul,p,h1,h5,h6,a,nav,span,table {
+    color: white;
+  }
+  .tw {
+    color: #fff;
+  }
+a {
+  text-decoration: none;
+}
 
-      <div style="width: 70px;" class="navbar-brand">
-           <div class="avatar avatar-sm mg-r-8">
-            <img src="{icon}" class="rounded-circle" alt="">
+.d-flexix1 {
+    display: flex!important;
+    align-content: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.card {
+  background-color: #2E3440;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+}
+
+.card .bxs{
+  background-color: #2E3440;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0);
+}
+h5, .h5 {
+    font-size: 1.09375rem;
+}
+
+</style>
+
+<section>
+  <div class="container">
+    <div class="psg">
+  <div class="row">
+    <div class="col-md-5">
+      <img  style="width:460px" src="{3.svg}" class="pull-left csx" alt="">
+    </div>
+    <div class="col-md-6 pb-50px d-flexus">
+      <div class="row">
+        <div class="col-md-12">
+            <img  style="width:75px" src="{ngorei.png}" class="pull-left csx mr-15px" alt="">
+          <div class="d-flexix">
+            <h1 style="" class="df-title fs-65px bold ">Ngorei <small class="fs-18px">v1.0.2</small> </h1>
+             <div class="d-none d-sm-block pull-right">
+              <img  style="width:30px; border-radius: 50%" src="{avatar}" class="" alt="">
+            </div>
           </div>
-          <h3 class="pd-t-10"></h3>
-      </div><!-- navbar-brand -->
-
-      <div onclick="newLink('pages/search','Search');" class="navbar-brandx d-none d-sm-flex content content-header">
-        <div class="content-search">
-          <i class="ti-search  cds"></i>
-          <input type="search" class="form-control" placeholder="Search...">
         </div>
-        <nav class="nav">
-            <a href="javascript:void(0);" class="nav-link bold1 fs-12px">CTR+K</a>
-            <a href="javascript:void(0);" class="nav-link bold1"><i class="picons-193"></i></a>
-        </nav>
-      </div>
+        <div class="col-md-12">
+         <p>
+          Ngorei adalah kerangka kerja tatiye develover untuk mengembangkan aplikasi seluler, desktop, atau web dengan tampilan dan nuansa asli. Ini juga merupakan alat pembuatan prototipe aplikasi.</p>
+             <nav class="navbar navbar-expand-lg bg-body-tertiary1">
+                  <a class="navbar-brand" href="{HOME}">
+                  <img src="{icon}" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                  <span class="tw">{title}</span>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0"id="utilities">
+                    <!-- App index -->
+                    <li class="nav-item">
+                      <a  class="nav-link tw" aria-current="page" href="{index.LINK}">{index.TITEL}</a>
+                    </li>
+                    <!-- END_App index -->
+                  </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="col-md-12 mt-1">
+          <div class="row">
+    <div class="col-md-12">
+      <div id="mainRoute">
+           
 
 
-      <div class="navbar-right d-sm-flex" style="margin-left:190px;">
-        <!-- App home -->
-          <a href="{home.LINK}" class="nav-link tx-white"><strong>{home.TITEL}</strong></a>
-        <!-- END_App home -->
-      </div>
 
-      <div class="navbar-right" style="width: 130px">
-        <a href="https://github.com/tatiye" target="_blank" class="btn btn-social"><i class="fab fa-github tx-white"></i></a>
 
-      </div>
-      
-    </nav><!-- navbar -->
-  <div id="mainRouteModal"></div>
-  <div id="mainRoute">
+ 
+  

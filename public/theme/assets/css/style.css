@@ -1,0 +1,16 @@
+  .card-header {
+    padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
+    margin-bottom: 0;
+    color: var(--bs-card-cap-color);
+    background-color: rgb(33 37 41 / 0%);
+    border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: var(--bs-list-group-item-padding-y) var(--bs-list-group-item-padding-x);
+    color: var(--bs-list-group-color);
+    text-decoration: none;
+    background-color: #fff0;
+    border: var(--bs-list-group-border-width) solid var(--bs-list-group-border-color);
+}

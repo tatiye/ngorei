@@ -9,8 +9,10 @@
     public function index(){
       //Set Data
       $data = [
-        'header' =>'Ngorei ',
-        'version' => 'v1.0.2'
+        'header' =>'Helo Net',
+        'title' =>'MVC-ES6',
+        'description' => 'TatiyeNet MVC PHP framework',
+        'version' => '1.0.0'
       ];
 
       

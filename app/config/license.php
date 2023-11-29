@@ -1,5 +1,6 @@
 <?php
 namespace app\config;
+
 class license {
  
  /*
@@ -11,8 +12,8 @@ class license {
  */
  public static function framework($key){
        $data=array(
-          'license'  =>'5BBCE-8321B-7AFB9-07F58-00001',
-          'password' =>'^^Nugi112',
+          'license'  =>'',
+          'password' =>'',
         ); 
         return $data[$key]; 
  }

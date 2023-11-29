@@ -1,11 +1,11 @@
 <?php 
-use app\tatiye;
-$db=new tatiye();
+use wolf05\helper\tatiyeNet;
+$db=new tatiyeNet();
 $conn=$db->PDO();
-$Text=tatiye::Text();
+$Text=tatiyeNet::Text();
 $data = json_decode(file_get_contents("php://input"));
-$row= tatiye::fetch('app_user','*',"id='".$data->user_id."'");
-$tabel=tatiye::tn(3);
+$row= tatiyeNet::fetch('app_user','*',"id='".$data->user_id."'");
+$tabel=tatiyeNet::tn(3);
 $arry=array();
 $arry1=array();
 $arry2=array();
@@ -18,8 +18,8 @@ if (!empty($row['id'])) {
       $arry[$key]=$value;
 	}
 	$date=array(
-		'date'=>tatiye::dt('EN'),
-		'time'=>tatiye::tm(),
+		'date'=>tatiyeNet::dt('EN'),
+		'time'=>tatiyeNet::tm(),
 	);
 	$result=$db->que(array_merge($arry,$date))->insert($tabel);
 	   // $nama_file=$arry1[1];

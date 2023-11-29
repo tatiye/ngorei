@@ -7,16 +7,14 @@ use app\tatiyeNetInit;
 $tatiyeNet = new tatiyeNetInit();
 $setApp = file_get_contents(tatiye::expDir('public/theme/package.json'));
 $arr = json_decode($setApp, true);
-
 foreach($arr['routePath'] as $keyPath => $value) {
         $routePath['path.'.$keyPath]=file_get_contents(tatiye::dir('public/'.$value));
 }
-
 $newSetapp= [
  'sitename'     =>$arr['app']['sitename'],
- 'favicon'      =>tatiye::images($arr['app']['favicon']),
- 'icon'         =>tatiye::images($arr['app']['icon']),
- 'logo'         =>tatiye::images($arr['app']['logo']),
+ 'favicon'      =>tatiye::LINK('images/'.$arr['app']['favicon']),
+ 'icon'         =>tatiye::LINK('images/'.$arr['app']['icon']),
+ 'logo'         =>tatiye::LINK('images/'.$arr['app']['logo']),
  'SignIn'       =>tatiye::URL('users/login'),
  'SignUp'       =>tatiye::URL('users/register'),
  'title'        =>$arr['app']['title'],

@@ -56,7 +56,7 @@ $DIREKTORY=[
   'tatiye.es6'    =>URLROOT.'/node_modules/tatiye/es6.js',
   'es6'           =>URLROOT.'/node_modules/tatiye/es6.js',
   'ES6'           =>URLROOT.'/node_modules/tatiye/es6.js',
-  'ngorei'        =>URLROOT.'/node_modules/tatiye/es6.js',
+  'Ngorey'        =>URLROOT.'/node_modules/tatiye/es6.js',
   'tatiye'        =>URLROOT.'/node_modules/tatiye/es6.js',
   'modules'       =>URLROOT.'/modules',
 ];

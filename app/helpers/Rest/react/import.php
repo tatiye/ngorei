@@ -1,15 +1,15 @@
 <?php 
-use app\tatiye;
-use app\Rest\react\storage;
-$db=new tatiye();
-$Text=tatiye::Text();
+use wolf05\helper\tatiyeNet;
+use wolf05\helper\Rest\React\storage;
+$db=new tatiyeNet();
+$Text=tatiyeNet::Text();
 $data = json_decode(file_get_contents("php://input"));
-$uid= tatiye::fetch('app_user','*',"id='".$data->user_id."'");
-$tabel=tatiye::tn(3);
+$uid= tatiyeNet::fetch('app_user','*',"id='".$data->user_id."'");
+$tabel=tatiyeNet::tn(3);
 $select=$data->select;
 $arry=array();
 $total_data      =storage::init($tabel,"WHERE row='1'")->total_data();
-$arry['update']=tatiye::dt('DTIE');
+$arry['update']=tatiyeNet::dt('DTIE');
 $arry["total"]   =$total_data;
 $arry['data']=array();
 if (!empty($uid)) {

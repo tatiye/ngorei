@@ -8,7 +8,6 @@
             "ipaddress"=>tatiye::getBrowser('IP'),                                                
             "browser"   =>tatiye::getBrowser('browser'),                                                
             "devices"   =>$data->indexOn,                                                
-            "link"      =>$data->href,                                                
             "platform"  =>tatiye::getBrowser('platform'),                                                
             "userid"    =>0,                                                 
             "time"      =>tatiye::tm(),                                                 

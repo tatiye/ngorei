@@ -48,7 +48,7 @@ class tatiyeNetImagesResize {
    | Develover Tatiye.Net 2022
    | @Date Kam 24 Mar 2022 12:16:50  WITA 
    */
-    public static function init($file='',$type='',$resize='',$nMFile='') {    
+    public static function init($file,$type,$resize='',$nMFile='') {    
         if ( !isset(self::$instance) ) 
         {
             $class = __CLASS__;
@@ -66,67 +66,6 @@ class tatiyeNetImagesResize {
    /* and class Db */
    /*
    |--------------------------------------------------------------------------
-   | Initializes watermar 
-   |--------------------------------------------------------------------------
-   | Develover Tatiye.Net 2022
-   | @Date  
-   */
-   public  function watermar($dir,$saveToDir='',$origenal,$wat,$posisi=''){
-               $watermark=tatiyeNet::dir('public/images/'.$wat);
-               $IDIR=explode('app',APPROOT);
-               $toOrigenal=$IDIR[0].$origenal;
-               $saveTo=$IDIR[0].$saveToDir.'/';
-               $IDpublic=explode('public',$saveToDir);
-           if (file_exists($saveTo.$this->nMFile)) {
-                 return  URLROOT.$IDpublic[1].'/'.$this->nMFile;
-           } else {         
-                    $img=new tatiyeNetImagesTools();
-                    $img->ImageTools($toOrigenal);
-                    if($posisi == 'bottomCenter') {
-                       $img->addWatermarkImage($watermark,
-                       tatiyeNetImagesTools::IMAGE_POSITION_BOTTOM, tatiyeNetImagesTools::IMAGE_POSITION_CENTER,14);
-                     } elseif ($posisi == 'topLeft'){
-                       $img->addWatermarkImage($watermark,
-                       tatiyeNetImagesTools::IMAGE_POSITION_TOP, tatiyeNetImagesTools::IMAGE_POSITION_LEFT, 5);    
-                     } elseif ($posisi == 'topCenter'){
-                       $img->addWatermarkImage($watermark,
-                       tatiyeNetImagesTools::IMAGE_POSITION_TOP, tatiyeNetImagesTools::IMAGE_POSITION_CENTER, 14);  
-                     } elseif ($posisi == 'topRight'){
-                       $img->addWatermarkImage($watermark,
-                       tatiyeNetImagesTools::IMAGE_POSITION_TOP, tatiyeNetImagesTools::IMAGE_POSITION_RIGHT,20);  
-                     } elseif ($posisi == 'centerLeft'){
-                       $img->addWatermarkImage($watermark,
-                       tatiyeNetImagesTools::IMAGE_POSITION_CENTER, tatiyeNetImagesTools::IMAGE_POSITION_LEFT, 12);    
-                     } elseif ($posisi == 'center'){
-                       $img->addWatermarkImage($watermark,
-                       tatiyeNetImagesTools::IMAGE_POSITION_CENTER, tatiyeNetImagesTools::IMAGE_POSITION_CENTER, 18);  
-                     } elseif ($posisi == 'centerRight'){
-                       $img->addWatermarkImage($watermark,
-                       tatiyeNetImagesTools::IMAGE_POSITION_CENTER, tatiyeNetImagesTools::IMAGE_POSITION_RIGHT,20);  
-                       } elseif ($posisi == 'bottomRight'){
-                       $img->addWatermarkImage($watermark,
-                       tatiyeNetImagesTools::IMAGE_POSITION_BOTTOM, tatiyeNetImagesTools::IMAGE_POSITION_RIGHT, 5);  
-                     } else {
-                       $img->addWatermarkImage($watermark,
-                       tatiyeNetImagesTools::IMAGE_POSITION_BOTTOM, tatiyeNetImagesTools::IMAGE_POSITION_LEFT,18);
-                     }
-       
-                  $img->save($saveTo, $this->nMFile, 95, false); 
-                  return  URLROOT.$IDpublic[1].'/'.$this->nMFile;
-
-           }
-
-
-    
-    // $img->addWatermark("Bottom-Left", ImageTools::IMAGE_POSITION_BOTTOM, ImageTools::IMAGE_POSITION_LEFT, 18, "#FFF", 0, 5); // Bottom Left
-    
-    // $img->addWatermark("Bottom-Center", ImageTools::IMAGE_POSITION_BOTTOM, ImageTools::IMAGE_POSITION_CENTER, 14, "#CCC", 0, 2); // Bottom Center
-    
-    // $img->addWatermark("Bottom-Right", ImageTools::IMAGE_POSITION_BOTTOM, ImageTools::IMAGE_POSITION_RIGHT, 20, "#66FF00", 12, 10); // Bottom Right 
-   }
-   /* and class watermar */
-   /*
-   |--------------------------------------------------------------------------
    | Initializes version 
    |--------------------------------------------------------------------------
    | Develover Tatiye.Net 2022
@@ -134,70 +73,8 @@ class tatiyeNetImagesResize {
    */
    public  function resize($dir,$saveToDir='',$origenal){
 
-              $IDcrop=explode('x',$crop);
-               $IDIR=explode('app',APPROOT);
-               $toOrigenal=$IDIR[0].$origenal;
-               $saveTo=$IDIR[0].$saveToDir.'/';
-               $IDpublic=explode('public',$saveToDir);
-           if (file_exists($saveTo.$this->nMFile)) {
-                 return  URLROOT.$IDpublic[1].'/'.$this->nMFile;
-           } else {         
-                    $img=new tatiyeNetImagesTools();
-                    $img->ImageTools($toOrigenal);
-                     $img->cropImage($IDcrop[0],$IDcrop[1],$this->width,$this->height); // new width, new height  
-                   $img->save($saveTo, $this->nMFile, 95, false); 
-                    return  URLROOT.$IDpublic[1].'/'.$this->nMFile;
-           }
-   }
-   /* and class version */
 
-      public  function grayscaleImage($dir,$saveToDir='',$origenal){
-
-              $IDcrop=explode('x',$crop);
-               $IDIR=explode('app',APPROOT);
-               $toOrigenal=$IDIR[0].$origenal;
-               $saveTo=$IDIR[0].$saveToDir.'/';
-               $IDpublic=explode('public',$saveToDir);
-           if (file_exists($saveTo.$this->nMFile)) {
-                 return  URLROOT.$IDpublic[1].'/'.$this->nMFile;
-           } else {         
-                    $img=new tatiyeNetImagesTools();
-                    $img->ImageTools($toOrigenal);
-                     // $img->cropImage($IDcrop[0],$IDcrop[1],$this->width,$this->height); // new width, new height  
-                     $img->grayscaleImage(); // Grayscale 
-                     $img->save($saveTo, $this->nMFile, 95, false); 
-                    return  URLROOT.$IDpublic[1].'/'.$this->nMFile;
-           }
-   }
-   /* and class version */
-   /*
-   |--------------------------------------------------------------------------
-   | Initializes cropImage 
-   |--------------------------------------------------------------------------
-   | Develover Tatiye.Net 2022
-   | @Date  
-   */
-   public  function crop($dir,$saveToDir='',$origenal,$crop){
-               $IDcrop=explode('x',$crop);
-               $IDIR=explode('app',APPROOT);
-               $toOrigenal=$IDIR[0].$origenal;
-               $saveTo=$IDIR[0].$saveToDir.'/';
-               $IDpublic=explode('public',$saveToDir);
-           if (file_exists($saveTo.$this->nMFile)) {
-                 return  URLROOT.$IDpublic[1].'/'.$this->nMFile;
-           } else {         
-                    $img=new tatiyeNetImagesTools();
-                    $img->ImageTools($toOrigenal);
-                     $img->cropImage($IDcrop[0],$IDcrop[1],$this->width,$this->height); // new width, new height  
-                   $img->save($saveTo, $this->nMFile, 95, false); 
-                    return  URLROOT.$IDpublic[1].'/'.$this->nMFile;
-           }
-
-   }
-
-   public  function resizeWidth($dir,$saveToDir='',$origenal,$crop){
-               $Text=tatiyeNet::Text();
-               $resize=$Text->strreplace([$crop,'x',',']);
+              $file=$this->file;
                $IDIR=explode('app',APPROOT);
                $toOrigenal=$IDIR[0].$origenal;
                $saveTo=$IDIR[0].$saveToDir.'/';
@@ -207,32 +84,12 @@ class tatiyeNetImagesResize {
            } else {         
                    $img=new tatiyeNetImagesTools();
                    $img->ImageTools($toOrigenal);
-                   $img->resizeWidth($crop); // new width
+                   $img->resizeOriginal($this->width,$this->height); // new width, new height  
                    $img->save($saveTo, $this->nMFile, 95, false); 
                    return  URLROOT.$IDpublic[1].'/'.$this->nMFile;
            }
    }
-
-   public  function resizeHeight($dir,$saveToDir='',$origenal,$crop){
-               $Text=tatiyeNet::Text();
-               $resize=$Text->strreplace([$crop,'x',',']);
-               $IDIR=explode('app',APPROOT);
-               $toOrigenal=$IDIR[0].$origenal;
-               $saveTo=$IDIR[0].$saveToDir.'/';
-               $IDpublic=explode('public',$saveToDir);
-           if (file_exists($saveTo.$this->nMFile)) {
-                 return  URLROOT.$IDpublic[1].'/'.$this->nMFile;
-           } else {         
-                   $img=new tatiyeNetImagesTools();
-                   $img->ImageTools($toOrigenal);
-                   $img->resizeHeight($crop); // new height
-                   $img->save($saveTo, $this->nMFile, 95, false); 
-                   return  URLROOT.$IDpublic[1].'/'.$this->nMFile;
-           }
-   }
-
-
-   /* and class cropImage */
+   /* and class version */
    /*
    |--------------------------------------------------------------------------
    | Initializes resizeTools 

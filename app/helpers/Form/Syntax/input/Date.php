@@ -5,12 +5,6 @@ if ($value[3]=='yy/mm/dd') {
 } else {
   $place=tatiye::dt('IN');// code...
 }
-if (!empty($row['addva2'])) {
-    $addVal='value="'.$row['addva2'].'"';
-
-} else {
-    $addVal=$row['value'];
-}
 
 ?>
 
@@ -20,7 +14,7 @@ if (!empty($row['addva2'])) {
     <div class="input-group-append">
     <span class="input-group-text" id="basic-addon2"><i class="feat feat-calendar"></i></span>
   </div>
-  <input type="text" id="datepicker<?=$row['name'];?>"class="form-control" name="<?=$row['name'];?>"placeholder=" <?=$place;?>" <?= $addVal;?> autocomplete='off'>
+  <input type="text" id="datepicker<?=$row['name'];?>"class="form-control" name="<?=$row['name'];?>"placeholder=" <?=$place;?>" <?=$row['value'];?> autocomplete='off'>
   
 </div>
 <small id="info_<?=$row['name'];?>"></small>

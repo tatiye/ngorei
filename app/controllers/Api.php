@@ -62,18 +62,8 @@
     }
 
    public function license(){
-     return  tatiye::licenseKey(tatiye::tn(2));
+     return  tatiye::licenseKey();
     }
-   public function licensekey(){
-     return  tatiye::licenseKeyPublic();
-    }
-
-   public function qrGgrrxm2xu9LjtXCooLeL6gPiNrY5SCKvNtHb66EZKF1OBwmfxq(){
-     return  tatiye::Createlicense();
-    }
-
-
-
 
     public function v1(){
       $TABELID=explode('/',$_GET['url']);

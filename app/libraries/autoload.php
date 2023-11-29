@@ -27,7 +27,6 @@ foreach(array_merge($DIREKTORY,$uid) as $page => $row) {
 }
 // TARGET
 $route=tatiye::routePanel($_POST['package']);
-
 echo $tatiyeNet->GraphObject($route);
 
 ?>

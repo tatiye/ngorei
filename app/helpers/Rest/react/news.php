@@ -1,9 +1,9 @@
 <?php 
-use app\tatiye;
-use app\Rest\react\storage;
+use wolf05\helper\tatiyeNet;
+use wolf05\helper\Rest\React\storage;
  
-$db=new tatiye();
-$Text=tatiye::Text();
+$db=new tatiyeNet();
+$Text=tatiyeNet::Text();
 $data = json_decode(file_get_contents("php://input"));
 $tabel='app_news';
 $select=$data->select;

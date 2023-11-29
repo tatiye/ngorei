@@ -16,9 +16,7 @@ $SyntaxType=[
    'textarea'    =>'/Textarea.php', //false,true
    'texquery'    =>'/texquery.php', //false,true
    'search2'     =>'/Search2.php', //false,true
-   'copy'        =>'/Copy.php', //false,true
    'hidden'      =>'/Hidden.php', //false,true
-   'button'      =>'/Button.php', //false,true
 
   ];
   // $ConID=cont($value[0]); 
@@ -57,8 +55,6 @@ if (!empty($SyntaxType[$value[0]])) {
          'colom_group'   =>'col-md-'.$value[1].'',
          'title'         =>$value[2],
          'readonly'      =>$value[2],
-         'addval'        =>$value[3]??='',
-         'addva2'        =>$value[4]??='',
          'label'         =>$stsLabel,
          'name'          =>$storage['az'].$iniNo,
          'placeholder'   =>'Bidang '.$value[2].' masukan',

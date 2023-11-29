@@ -174,8 +174,8 @@ public  function substr($H1,$H2='',$H3=''){
  * @param array  options the display options .
  * @param mixed  Block to generate a customized inside  content.
  */
-public  function numberFormat($H1,$H2='',$H3='.'){
-return number_format((float)$H1[0],$H1[1],",",$H3);
+public  function numberFormat($H1,$H2='',$H3=''){
+return number_format((float)$H1[0],$H1[1],",",",");
 
    // return number_format($H1[0],$H1[1],",",".");
 
@@ -635,6 +635,19 @@ public  function QRcode($string, $width = 150, $height = 150) {
     return '<img src="' . $apiUrl . '" ' . trim($attr) . ' />';
  }
 
+
+public  function QRulr($string, $width = 150, $height = 150) {
+    $attributes = array("id"=>'QRcode');
+    $attr = "";
+    if (isset($attributes) and is_array($attributes) and !empty($attributes)):
+        foreach ($attributes as $attributeName => $attributeValue):
+            $attr.= $attributeName . '="' . $attributeValue . '" ';
+        endforeach;
+    endif;
+    $apiUrl =  "https://chart.apis.google.com/chart?chs=" . $width . "x" . $height . "&cht=qr&chl=" . urlencode($string);
+    return $apiUrl;
+ }
+ 
 /*
 |--------------------------------------------------------------------------
 | Initializes provider 

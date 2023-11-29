@@ -109,16 +109,7 @@ class storage {
          
     }
 
-    public  function keywordsId($keywords,$search){
-         $mykeywords="$keywords='".$search."'";
-         if (!empty($search)) {
-         return 'AND '.$mykeywords ;
-         } else {
-         return '';
-             // code...
-         }
-         
-    }
+
    /*
    |--------------------------------------------------------------------------
    | Initializes title 

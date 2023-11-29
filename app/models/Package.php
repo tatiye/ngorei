@@ -48,20 +48,7 @@ class Package {
    */
    public static function Public(){
         return [
-         "1"=>['Demo'              ,'demo'          ,'package'     ,true],
-         "2"=>['Datatables'        ,'datatables'    ,'package'     ,true],
-         "3"=>['Rbac'              ,'rbac'          ,'settings'    ,true],
-         "4"=>['Buku Kas'          ,'bukukas'       ,'layers'      ,true],
-         "5"=>['Office'            ,'office'        ,'database'    ,true],
-         "6"=>['Pricing'           ,'pricing'       ,'trending-up' ,true],
-         "7"=>['Item Produk'       ,'item'          ,'pie-chart'   ,false],
-         "8"=>['Sisinfo'           ,'sisinfo'       ,'server'      ,true],
-         "9"=>['Biling'            ,'biling'        ,'server'      ,true],
-         "10"=>['Portfolio'        ,'portfolio'     ,'pocket'      ,true],
-         "11"=>['Payment'          ,'payment'       ,'credit-card' ,false],
-         "12"=>['WhatsApp'         ,'whatsapp'      ,'phone'       ,false],
-         "13"=>['Postingan'        ,'postingan'     ,'layout'       ,true],
-         // "10"=>['cmeter'            ,'cmeter'        ,'server'      ,true],
+         "1"=>['Demo'              ,'demo'          ,'package'     ,true]
        ];
        
    }
@@ -75,23 +62,7 @@ class Package {
    */
    public static function tabel(){
        return array(
-          'demo'              =>true,
-          'appfile'           =>true,
-          'appuserprofil'     =>true,
-          'appnews'           =>true,
-          'appuserpackage'    =>true,
-          'appsampah'         =>true,
-          'apparchive'        =>true,
-          'appplaceholder'    =>true,
-          'sisinfo'           =>true,
-          'appplaceholder'    =>true,
-          'bukukas'           =>true,
-          'appoffice'         =>true,
-          'sales'             =>true,
-          'salesitem'         =>true,
-          'biling'            =>true,
-          'portfolio'         =>true,
-          'appnews'           =>true,
+          'demo'              =>true
      );
        
    }
@@ -105,24 +76,7 @@ class Package {
   */
   public static function Api(){
        return array(
-       'demo/0.1',
-       'tables/0.1',
-       'devices/0.1',
-       'profil/0.1',
-       'news/0.1',
-       'react/0.1',
-       'datatables/0.1',
-       'rbac/0.1',
-       'sisinfo/0.1',
-       'bukukas/0.1',
-       'office/0.1',
-       'pricing/0.1',
-       'item/0.1',
-       'biling/0.1',
-       'portfolio/0.1',
-       'payment/0.1',
-       'whatsapp/0.1',
-       'postingan/0.1',
+       'demo/0.1'
      );
   }
   /* and class news Assets  office */
@@ -136,9 +90,6 @@ class Package {
   public static function Assets(){
        return array(
        'demo',
-       'tables',
-       'devices',
-       'profil',
      );
   }
   /* and class Assets */
@@ -179,8 +130,26 @@ class Package {
  | @Date  
  */
  public static function Profil(){
-       $uid=tatiye::ssoId(); 
-       return $uid;   
+         @$row= tatiye::fetch('appuserprofil','*',"userid='".$_SESSION['user_id']."'");
+       if (!empty($row['avatar'])) {
+          $Avatar=tatiye::images('80x80/'.$row['avatar']);
+       } else {
+          $Avatar=tatiye::images('profil/admin.jpeg');
+       }
+      $uid=array(
+        'nama'              =>$row['nama']??='',
+        'email'             =>$row['email']??='',
+        'alamat'            =>$row['alamat']??='',
+        'avatar'            =>$Avatar,
+        'mapId'             =>$row['mapId']??='',
+        'date'              =>$row['date']??='',
+        'mapId'             =>$row['mapId']??='',
+        'date'              =>$row['date']??='',
+        'time'              =>$row['time']??='',
+        'status'            =>$row['status']??='',
+        ); 
+       return $uid;
+     
  }
  /* and class Profil */
 

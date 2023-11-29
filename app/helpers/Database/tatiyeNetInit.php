@@ -67,8 +67,7 @@ class tatiyeNetInit
     | @Date  Sab 02 Apr 2022 03:07:09  WITA
     */
     public  function connect(){
-        $db=tatiye::myDb();
-        $connection = new mysqli($db['host'],$db['username'],$db['password'],$db['database']);
+        $connection = new mysqli(DB_HOST,DB_USER,DB_PASS,DB_NAME);
        if ($connection ->connect_errno) {
          echo "Failed to connect to MySQL: ";
          exit();
