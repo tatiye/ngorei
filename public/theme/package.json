@@ -1,0 +1,83 @@
+{
+   "app":{
+         "sitename"    :"Tatiye",
+         "favicon"     :"Favicon.png",
+         "icon"        :"Logo.png",
+         "logo"        :"Logo.png",
+         "images"      :"cover.png",
+         "title"       :"Tatiye Developer Framework ",
+         "headline"    :"Tatiye Developer Framework ",
+         "description" :"Ngorei adalah kerangka kerja tatiye develover untuk mengembangkan aplikasi seluler, desktop, atau web dengan tampilan dan nuansa asli. Ini juga merupakan alat pembuatan prototipe aplikasi",
+         "version"     :"v1.0.4",
+         "router"      :false,
+         "terminal"    :"app",
+         "development" :true,
+         "mobile"      :false
+   },
+   "assets":{
+      "autoload":true,
+      "header":[ 
+         "assets/css/select2.min.css",
+         "assets/css/ngorei.css",
+         "assets/css/Components.css",
+         "assets/js/jquery.min.js",
+         "modules/theme/app.jsx"
+      ],
+      "footer":[ 
+         "assets/js/select2.min.js",
+         "assets/js/bootstrap.bundle.min.js"
+
+      ]
+   },
+
+   "filePath":{
+      "1":[ "images/assets"],
+      "2":[ "theme/assets/img"],
+      "3":[ "images"]
+   },
+  
+   "require":{
+      "elements":{
+         "class":"Elements",
+         "development":true,
+         "tabel":false,
+         "segment":10,
+         "path"   :false
+      },
+      "mobile":{
+         "class":"mobile",
+         "development":true,
+         "tabel":false,
+         "segment":10,
+         "path"   :false
+      },
+      "pages" :{
+         "class":"pages",
+         "development":true,
+         "tabel":false,
+         "segment":10,
+         "path"   :false
+      },
+      "blog":{
+         "class":"blog",
+         "development":true,
+         "tabel":"news",
+         "segment":1,
+         "path"   :"blog/detail"
+      },
+      "docs":{
+         "class":"docs",
+         "development":true,
+         "tabel":false,
+         "segment":10,
+         "path"   :false
+      }
+
+   },
+   "includePath":{
+      "Configurasi":false
+   },
+   "import":false
+}
+
+

@@ -1,0 +1,29 @@
+
+{
+    "name": "tatiye/terminal",
+    "description": "DevTools Ngorei",
+    "homepage": "https://github.com/tatiye/terminal.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "package": "terminal",
+            "version": "0.0.1",
+            "name": "tatiye",
+            "email": "info@tatiye.net"
+        }
+    ],
+   "assets":[ 
+         "assets/js/jquery-ui.min.js",
+         "assets/js/js.cookie.js",
+         "assets/js/jquery.json-viewer.js",
+         "assets/js//prism/clipboard.code.js",
+         "assets/js//prism/clipboard.min.js"
+      ],
+    "autoload": {
+        "psr-4": {"terminal\\": "src/"}
+    },
+    "require": {
+        "php": "^7.4|^8.0"
+    }
+}
+
